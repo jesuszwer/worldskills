@@ -4,14 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="32sp"
-    android:layout_marginVertical="24sp"
+    android:layout_marginVertical="16sp"
     tools:context=".TicketsFragment">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginVertical="16sp"
         android:orientation="vertical">
 
         <TextView
@@ -32,45 +31,10 @@
             android:text="Create a new tickets"
             android:textSize="16sp" />
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/ticket_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/open_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Opening Ceremony"
-                android:textAlignment="center"
-                android:textSize="18sp" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/open_list"
-                android:layout_width="match_parent"
-                android:layout_height="200sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/close_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Closing Ceremony"
-                android:textAlignment="center"
-                android:textSize="18sp" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/close_list"
-                android:layout_width="match_parent"
-                android:layout_height="200sp" />
-
-        </LinearLayout>
+            android:layout_height="match_parent" />
 
     </LinearLayout>
 

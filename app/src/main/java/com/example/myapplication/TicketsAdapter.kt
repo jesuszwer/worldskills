@@ -13,6 +13,7 @@ class TicketsAdapter(private val dataList: List<TicketData>) : RecyclerView.Adap
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val name: TextView = itemView.findViewById(R.id.name_text)
         val place: TextView = itemView.findViewById(R.id.place_text)
+        val type: TextView = itemView.findViewById(R.id.type_text)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -25,6 +26,7 @@ class TicketsAdapter(private val dataList: List<TicketData>) : RecyclerView.Adap
 
         holder.name.text = currentItem.name
         holder.place.text = currentItem.place
+        holder.type.text = if (currentItem.type == 1) "Open" else "Close"
 
     }
 

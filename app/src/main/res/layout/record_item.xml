@@ -15,40 +15,28 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_marginStart="16dp">
 
             <TextView
                 android:id="@+id/name_text"
-                android:layout_width="match_parent"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:text="Name Title"
+                android:text="Audio 1"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="8sp"
                 android:ellipsize="end"
                 android:maxLines="1"/>
 
-            <TextView
-                android:id="@+id/place_text"
-                android:layout_width="match_parent"
+            <ImageView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Description"
-                android:textSize="16sp"
-                android:textAlignment="textEnd"
-                android:ellipsize="end"
-                android:maxLines="2"/>
+                android:src="@drawable/ic_play"
+                android:gravity="end"/>
+
 
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/type_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Type Open or Close"
-            android:textSize="16sp"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"/>
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

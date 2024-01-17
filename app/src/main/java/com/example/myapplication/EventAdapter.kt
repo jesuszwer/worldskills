@@ -29,8 +29,24 @@ class EventAdapter(private val dataList: List<EventData>) : RecyclerView.Adapter
         holder.title.text = currentItem.title
         holder.desc.text = currentItem.desc
         holder.status.text = currentItem.status
+
+        holder.itemView.setOnClickListener{
+            listener?.onItemClick(position)
+        }
+
     }
 
     override fun getItemCount() = dataList.size
+
+    interface OnItemClickListener {
+        fun onItemClick(position: Int)
+    }
+
+    private var listener: OnItemClickListener?=null
+
+    fun setOnItemClickListener(listener: OnItemClickListener) {
+        this.listener = listener
+    }
+
 
 }

@@ -31,6 +31,28 @@ class EventFragment : Fragment() {
         val adapter = EventAdapter(dataList)
         recyclerView.adapter = adapter
 
+        adapter.setOnItemClickListener(object : EventAdapter.OnItemClickListener {
+            override fun onItemClick(position: Int) {
+                navigateToOtherFragment()
+            }
+        })
+
         return view
     }
+
+    private fun navigateToOtherFragment() {
+        val fragmentManager = requireActivity().supportFragmentManager
+        val transaction = fragmentManager.beginTransaction()
+
+        // Замените "YourOtherFragment" на имя вашего другого фрагмента
+        val otherFragment = EventDetailFragment()
+
+        // Добавьте к транзакции операции для замены текущего фрагмента на другой
+        transaction.replace(R.id.fragment_container, otherFragment)
+        transaction.addToBackStack(null)  // Добавьте в стек, чтобы можно было вернуться
+
+        // Примените транзакцию
+        transaction.commit()
+    }
+
 }
