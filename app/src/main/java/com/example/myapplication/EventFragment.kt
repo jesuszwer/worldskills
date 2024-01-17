@@ -29,6 +29,18 @@ class EventFragment : Fragment() {
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
                         "Integer velmolestie felis. Vivamus sed lacinia elit. " +
                         "Suspendisse tristique bibendum eros in elementum",
+                "Unread"),
+            EventData(R.drawable.ic_events,
+                "Event 1",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+                        "Integer velmolestie felis. Vivamus sed lacinia elit. " +
+                        "Suspendisse tristique bibendum eros in elementum",
+                "Unread"),
+            EventData(R.drawable.ic_events,
+                "Event 1",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+                        "Integer velmolestie felis. Vivamus sed lacinia elit. " +
+                        "Suspendisse tristique bibendum eros in elementum",
                 "Unread")
         )
 

@@ -34,6 +34,14 @@ class MainActivity : AppCompatActivity() {
                     replaceFragment(EventFragment())
                     return@setOnNavigationItemSelectedListener true
                 }
+                R.id.nav_tickets -> {
+                    replaceFragment(TicketsFragment())
+                    return@setOnNavigationItemSelectedListener true
+                }
+                R.id.nav_records -> {
+                    replaceFragment(RecordsFragment())
+                    return@setOnNavigationItemSelectedListener true
+                }
                 else -> false
             }
         }
