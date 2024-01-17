@@ -7,12 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class EventFragment : Fragment() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -29,22 +25,10 @@ class EventFragment : Fragment() {
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
                         "Integer velmolestie felis. Vivamus sed lacinia elit. " +
                         "Suspendisse tristique bibendum eros in elementum",
-                "Unread"),
-            EventData(R.drawable.ic_events,
-                "Event 1",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
-                        "Integer velmolestie felis. Vivamus sed lacinia elit. " +
-                        "Suspendisse tristique bibendum eros in elementum",
-                "Unread"),
-            EventData(R.drawable.ic_events,
-                "Event 1",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
-                        "Integer velmolestie felis. Vivamus sed lacinia elit. " +
-                        "Suspendisse tristique bibendum eros in elementum",
                 "Unread")
         )
 
-        val adapter = MyAdapter(dataList)
+        val adapter = EventAdapter(dataList)
         recyclerView.adapter = adapter
 
         return view

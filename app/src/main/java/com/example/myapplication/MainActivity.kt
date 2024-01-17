@@ -16,18 +16,16 @@ class MainActivity : AppCompatActivity() {
 
         val fragmentManager: FragmentManager = supportFragmentManager
 
-        // Begin a new FragmentTransaction
         val fragmentTransaction: FragmentTransaction = fragmentManager.beginTransaction()
 
-        // Replace the content of the FrameLayout with your fragment
         val myFragment: Fragment = MyFragment()
         fragmentTransaction.replace(R.id.fragment_container, myFragment)
 
-        // Commit the transaction
         fragmentTransaction.commit()
 
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.navigation_panel)
 
+        // Обработчики кнопок на панеле навигации
         bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_events -> {

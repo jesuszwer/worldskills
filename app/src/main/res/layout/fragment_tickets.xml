@@ -45,12 +45,11 @@
                 android:textAlignment="center"
                 android:textSize="18sp" />
 
-            <FrameLayout
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/open_list"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="200sp" />
 
-            </FrameLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -66,12 +65,11 @@
                 android:textAlignment="center"
                 android:textSize="18sp" />
 
-            <FrameLayout
+            <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/close_list"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="200sp" />
 
-            </FrameLayout>
         </LinearLayout>
 
     </LinearLayout>
