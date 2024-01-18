@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.Event
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
 
 class EventFragment : Fragment() {
 
@@ -20,7 +21,8 @@ class EventFragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireActivity())
 
         val dataList = listOf(
-            EventData(R.drawable.ic_events,
+            EventData(
+                R.drawable.ic_events,
                 "Event 1",
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
                         "Integer velmolestie felis. Vivamus sed lacinia elit. " +

@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.Records
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
 
 class RecordsFragment : Fragment() {
 

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginVertical="16sp"
-    tools:context=".RecordsFragment">
+    tools:context=".Records.RecordsFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

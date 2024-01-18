@@ -5,6 +5,9 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import com.example.myapplication.Event.EventFragment
+import com.example.myapplication.Records.RecordsFragment
+import com.example.myapplication.Tickets.TicketsFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 @Suppress("DEPRECATION")

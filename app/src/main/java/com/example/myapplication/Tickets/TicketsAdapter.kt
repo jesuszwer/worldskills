@@ -1,12 +1,11 @@
-package com.example.myapplication
+package com.example.myapplication.Tickets
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
-import androidx.appcompat.view.menu.MenuView.ItemView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
 
 class TicketsAdapter(private val dataList: List<TicketData>) : RecyclerView.Adapter<TicketsAdapter.ViewHolder>() {
 

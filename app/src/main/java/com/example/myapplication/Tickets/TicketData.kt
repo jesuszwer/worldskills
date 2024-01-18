@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.Tickets
 
 class TicketData(
     val name: String,
