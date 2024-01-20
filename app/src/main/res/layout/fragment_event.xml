@@ -32,8 +32,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="All"
-                android:onClick="all_filter"/>
+                android:text="All" />
 
             <Button
                 android:id="@+id/unread_btn"
@@ -42,16 +41,14 @@
                 android:layout_weight="1"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
-                android:text="Unread"
-                android:onClick="unread_filter"/>
+                android:text="Unread"/>
 
             <Button
                 android:id="@+id/read_btn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Read"
-                android:onClick="read_filter"/>
+                android:text="Read"/>
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView

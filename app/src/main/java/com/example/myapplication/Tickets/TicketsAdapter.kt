@@ -27,8 +27,22 @@ class TicketsAdapter(private val dataList: List<TicketData>) : RecyclerView.Adap
         holder.place.text = currentItem.place
         holder.type.text = if (currentItem.type == 1) "Open" else "Close"
 
+        holder.itemView.setOnClickListener{
+            listener?.onItemClick(position)
+        }
+
     }
 
     override fun getItemCount() = dataList.size
+
+    interface OnItemClickListener {
+        fun onItemClick(position: Int)
+    }
+
+    private var listener: OnItemClickListener?=null
+
+    fun setOnItemClickListener(listener: OnItemClickListener) {
+        this.listener = listener
+    }
 
 }

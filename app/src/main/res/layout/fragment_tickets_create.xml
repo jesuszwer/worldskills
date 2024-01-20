@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tickets.TicketsCreateFragment">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16sp"
+            android:paddingVertical="16sp">
+
+
+            <TextView
+                android:id="@+id/tickets_detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24sp"
+                android:layout_marginBottom="32sp"
+                android:text="Ticket Create"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:text="Choose one picture" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="216sp"
+                android:layout_marginBottom="16sp"
+                android:src="@drawable/ic_img" />
+
+            <Button
+                android:id="@+id/create_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Create"
+                android:layout_gravity="bottom"
+                android:textSize="24sp" />
+
+    </LinearLayout>
+
+</FrameLayout>
