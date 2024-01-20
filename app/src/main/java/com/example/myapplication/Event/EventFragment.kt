@@ -20,34 +20,34 @@ class EventFragment : Fragment() {
         val recyclerView: RecyclerView = view.findViewById(R.id.event_list)
         recyclerView.layoutManager = LinearLayoutManager(requireActivity())
 
-        val dataList = listOf(
-            EventData(
-                R.drawable.ic_events,
-                "Event 1",
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
-                        "Integer velmolestie felis. Vivamus sed lacinia elit. " +
-                        "Suspendisse tristique bibendum eros in elementum",
-                "Unread")
-        )
+        val eventDataManager = EventDataManager()
+
+        val dataList = eventDataManager.loadEventData(resources)
 
         val adapter = EventAdapter(dataList)
         recyclerView.adapter = adapter
 
         adapter.setOnItemClickListener(object : EventAdapter.OnItemClickListener {
             override fun onItemClick(position: Int) {
-                navigateToOtherFragment()
+                val currentItem = dataList[position]
+                navigateToOtherFragment(currentItem)
             }
         })
 
         return view
     }
 
-    private fun navigateToOtherFragment() {
+    private fun navigateToOtherFragment(currentItem: EventData) {
         val fragmentManager = requireActivity().supportFragmentManager
         val transaction = fragmentManager.beginTransaction()
 
         // Замените "YourOtherFragment" на имя вашего другого фрагмента
-        val otherFragment = EventDetailFragment()
+        val otherFragment = EventDetailFragment.newInstance(
+            currentItem.imageResource,
+            currentItem.title,
+            currentItem.desc,
+            currentItem.status
+        )
 
         // Добавьте к транзакции операции для замены текущего фрагмента на другой
         transaction.replace(R.id.fragment_container, otherFragment)
